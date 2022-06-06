@@ -55,7 +55,7 @@
     <?php
         if(!empty($_GET))
         { ?>
-            <div class="d-flex justify-content-center">
+            <div style="position: absolute; left: 35%;">
                 <div id="hide" style="display:none" class="alert  alert-warning" role="alert">
                     You don't have an account, Sign up now
                 </div>

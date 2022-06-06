@@ -55,9 +55,9 @@
     <?php
         if(!empty($_GET))
         { ?>
-            <div class="d-flex justify-content-center">
-                <div id="hide" style="display:none" class="alert  alert-info w-50" role="alert">
-                    You are not registered, try to login
+            <div style="position: absolute; left: 38.9%;">
+                <div id="hide" style="display:none" class="alert  alert-info" role="alert">
+                    You are now registered, try to login
                 </div>
             </div>
         <?php }
