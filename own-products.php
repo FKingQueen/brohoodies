@@ -65,8 +65,24 @@
         <?php
             require_once 'dbConfig.php'; 
 
-            $email = $_GET['email'];
-            $pw = $_GET['pw'];
+            if(emtpy($_GET['userId_chk']))
+            {
+                $userId_chk = $_GET['userId_chk'];
+                $query = "SELECT * FROM user WHERE id = '$userId_chk'";
+                $accchk = $conn->query($query);
+    
+    
+                while($row = $accchk->fetch_assoc()) {
+                    $email = $row["email"];
+                    $pw = $row["password"];
+                }
+            }
+            else{
+                $email = $_GET['email'];
+                $pw = $_GET['pw'];
+            }
+
+
 
             $query = "SELECT * FROM user WHERE email = '$email' and password = '$pw'";
             $name = $conn->query($query);

@@ -37,6 +37,6 @@ while($row = $userAccount->fetch_assoc()) {
     $pw = $row["password"];
 }
 
-header("Location: home.php?msg=New Product Successfully Added&email=$email&pw=$pw");
+header("Location: own-products.php?msg=New Product Successfully Added&email=$email&pw=$pw");
 
 ?>
